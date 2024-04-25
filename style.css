@@ -1,0 +1,35 @@
+
+body {
+  background-color: #efedd6;
+  display: flex;
+  flex-direction: column; /* Vertical */
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+
+
+.box {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0.7, 0.7);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+/* izquierda y derecha */
+.box:nth-of-type(even) {
+  transform: translateX(-300%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+

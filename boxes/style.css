@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
-  box-sizing: border-box;
-}
 
 body {
   background-color: #9b9898;
@@ -16,6 +13,7 @@ body {
   overflow: hidden;
 }
 
+/* boton */
 .magic {
   background-color: #baa7b7;
   color: #fff;
@@ -24,27 +22,18 @@ body {
   border-radius: 3px;
   font-size: 16px;
   padding: 12px 20px;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  letter-spacing: 1px;
-  box-shadow: 0 3px #7f4074;
-  z-index: 100;
+  cursor: pointer; 
+  letter-spacing: 5px; /* Espacio entre cada letra del boton */
+  box-shadow: 0 4px #cbc3ca;
+  z-index: 100; /* adelante/sobre */
 }
 
-.magic:focus {
-  outline: none;
-}
-
-.magic:active {
-  box-shadow: none;
-  transform: translateY(2px);
-}
 
 .boxes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  
+  justify-content: space-around; /* Si elimino solo quedan filas(4) */
   height: 500px;
   width: 500px;
   position: relative;
@@ -56,6 +45,7 @@ body {
   height: 600px;
 }
 
+/* Rotacion circular */
 .boxes.big .box {
   transform: rotateZ(360deg);
 }
@@ -63,13 +53,13 @@ body {
 .box {
   background-image: url('https://64.media.tumblr.com/4c7d948425898ea854b6fef2f265a8ae/tumblr_n5kn9hyc1J1sp6e2vo1_r1_500.gif');
   background-repeat: no-repeat;
-  background-size: 500px 500px;
+  background-size: 500px 500px;/* ocupe todo el espacio del contenedor */
   position: relative;
   height: 125px;
   width: 125px;
   transition: 0.4s ease;
 }
-
+/* Efecto 3d en el lado derecho */
 .box::after {
   content: '';
   background-color: #cbc3ca;
@@ -80,9 +70,9 @@ body {
   width: 15px;
   transform: skewY(45deg);
 }
-
+/* Efecto 3d en la parte de abajo */
 .box::before {
-  content: '';
+  content: ''; 
   background-color: #cbc3ca;
   position: absolute;
   bottom: -15px;
